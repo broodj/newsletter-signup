@@ -16,6 +16,6 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-app.post('/', function(){
-
-});
+// app.post('/', function(){
+//
+// });
