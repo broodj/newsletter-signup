@@ -16,6 +16,14 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/failure', function(req, res){
+  res.sendFile(__dirname + "/index.html");
+});
+
+app.get('/success', function(req, res){
+  res.sendFile(__dirname + "/index.html");
+});
+
 app.post('/', function(req, res){
 
   var forename = req.body.forename;
@@ -43,7 +51,7 @@ app.post('/', function(req, res){
     method: "POST",
     //Include API key
     headers: {
-      "Authorization": "brody "
+      "Authorization": "brody eeabd9081dfd4149eb61565b35f89f49-us20"
     },
     // body: jsonData
   };
@@ -65,6 +73,8 @@ app.post('/', function(req, res){
   });
 
 });
+
+
 
 
 
