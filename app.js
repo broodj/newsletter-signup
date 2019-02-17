@@ -43,18 +43,27 @@ app.post('/', function(req, res){
     method: "POST",
     //Include API key
     headers: {
-      "Authorization": "brody 4b719bcf4483436b2fb934cf7d428f3a-us20"
+      "Authorization": "brody "
     },
-    body: jsonData
+    // body: jsonData
   };
 
   request(options, function(error, response, body){
     if(error){
-      console.log(error);
+
+      res.sendFile(__dirname + '/failure.html');
     } else {
-      console.log(response.statusCode);
+
+      if (response.statusCode === 200) {
+        res.sendFile(__dirname + '/success.html');
+      } else {
+        res.sendFile(__dirname + '/failure.html');
+      }
+
     }
+
   });
+
 });
 
 
