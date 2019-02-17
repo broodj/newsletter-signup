@@ -51,9 +51,9 @@ app.post('/', function(req, res){
     method: "POST",
     //Include API key
     headers: {
-      "Authorization": "brody eeabd9081dfd4149eb61565b35f89f49-us20"
+      "Authorization": "brody "
     },
-    // body: jsonData
+    body: jsonData
   };
 
   request(options, function(error, response, body){
